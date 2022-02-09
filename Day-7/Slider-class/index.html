@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>image slider</title>
+
+    <!-- fontAwesome  -->
+    <script
+      src="https://kit.fontawesome.com/567b8b6a4d.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- custom style  -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Image Slider</h1>
+    <div class="container">
+      <form>
+        <div class="form-group">
+          <label for="title">Title</label>
+          <input
+            type="text"
+            id="title"
+            name="title"
+            placeholder="A word for the image!!"
+          />
+        </div>
+        <div class="form-group">
+          <label for="desc">Description</label>
+          <input
+            type="text"
+            id="desc"
+            name="desc"
+            placeholder="How would you describe the image?"
+          />
+        </div>
+        <div class="form-group">
+          <label for="pictures" class="btn file-upload-btn"
+            >Upload Images</label
+          >
+          <input
+            type="file"
+            id="pictures"
+            name="pictures"
+            accept="image/png, image/jpeg"
+            multiple="true"
+          />
+        </div>
+        <div class="form-group">
+          <button id="btn">Show image(s) in the slider</button>
+        </div>
+      </form>
+      <div class="slider" id="slider">
+        <div class="slides"></div>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>

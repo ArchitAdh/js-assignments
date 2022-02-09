@@ -1,0 +1,320 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  background: #272b30;
+}
+
+/* Start Game  */
+.start {
+  color: #fff;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1)),
+    url(../img/bg.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  padding: 2rem 4rem;
+  font-family: "Press Start 2P", cursive;
+}
+
+.start-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 3.5rem;
+}
+
+h1 {
+  text-align: center;
+  font-size: 1.6rem;
+  margin-top: 2rem;
+}
+
+h2 {
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.choose {
+  display: flex;
+  align-items: center;
+  margin: 2rem 1rem;
+}
+
+.choose p {
+  margin-right: 2rem;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.choose img,
+.configuration img {
+  width: 60px;
+  text-align: center;
+  display: inline-block;
+  margin: 0 2rem;
+  cursor: pointer;
+}
+
+.choose--pipe img,
+.config-pipe img {
+  height: 200px;
+}
+
+.config {
+  margin: 2rem 1rem;
+}
+
+.config img {
+  cursor: default;
+}
+
+#play {
+  position: absolute;
+  left: 50%;
+  width: 300px;
+  margin-left: -150px;
+  margin-top: 1rem;
+  font-family: "Press Start 2P", cursive;
+  padding: 1rem;
+}
+
+/* Game page */
+.game {
+  display: none;
+  justify-content: space-around;
+  color: #fff;
+  height: 100vh;
+  background: #272b30;
+  overflow: hidden;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.btn {
+  border: none;
+  text-decoration: none;
+  background: #e7680c;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0.5rem;
+  cursor: pointer;
+  z-index: 5;
+  text-align: center;
+}
+
+/*  Main Menu Btn */
+.main-menu {
+  display: block;
+  margin-top: 5rem;
+  width: 100%;
+  border: none;
+  font-family: "Press Start 2P", cursive;
+  font-size: 0.8rem;
+  padding: 1rem 0;
+}
+
+/* LeaderBoards */
+
+.leaderboard {
+  margin-top: 4rem;
+  padding: 1rem;
+  background: #2e3338;
+  height: 400px;
+  width: 350px;
+  border-radius: 5px;
+  overflow-y: hidden;
+  color: aliceblue;
+}
+
+/* hide scrollbar but make scrollable */
+.leaderboard {
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+  overflow-y: scroll;
+}
+
+.leaderboard::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
+}
+
+.leaderboard h2 {
+  text-align: center;
+  text-decoration: underline;
+  margin-bottom: 1rem;
+  font-family: "Press Start 2P", cursive;
+}
+
+.leaderboard form {
+  text-align: center;
+  margin: 1rem 0;
+  display: none;
+}
+
+.leaderboard form .btn {
+  padding: 0.5rem 1rem;
+  margin-left: 0.5rem;
+}
+
+.leaderboard form .name {
+  outline: none;
+  border: none;
+  padding: 0.6rem;
+  border-radius: 5px;
+  background: whitesmoke;
+}
+
+table {
+  text-align: center;
+  width: 300px;
+}
+
+.leaderboard table td,
+.leaderboard table th {
+  margin-right: 1rem;
+  padding: 0.5rem;
+  border-bottom: 1px solid #afadad;
+}
+
+.delete {
+  font-size: 1.5rem;
+  color: #dc3545;
+  text-decoration: none;
+}
+
+/* Instructions */
+
+.instructions {
+  background: #2e3338;
+  border-radius: 5px;
+  height: 300px;
+  width: 250px;
+  margin-top: 4rem;
+  padding: 1rem;
+  color: aliceblue;
+}
+
+.instructions h2 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-family: "Press Start 2P", cursive;
+}
+
+.instructions p {
+  line-height: 1.5;
+}
+
+.instructions span {
+  display: block;
+  text-align: center;
+  font-family: "Press Start 2P", cursive;
+  font-size: 0.9rem;
+}
+
+/* Game */
+
+.game-container {
+  align-self: center;
+  width: 500px;
+  height: 650px;
+  overflow: hidden;
+  position: relative;
+}
+
+.sky {
+  position: relative;
+  width: 500px;
+  height: 570px;
+  background: url(../img/sky.png);
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.bird {
+  position: absolute;
+  left: 200px;
+  bottom: 220px;
+  width: 50px;
+  height: 40px;
+  background: url(../img/bird1.png) center center/cover;
+  z-index: 2;
+}
+
+.obstacle {
+  width: 60px;
+  height: 250px;
+  position: absolute;
+}
+
+.pipe-1 {
+  background-image: url(../img/pipe1.png);
+}
+
+.pipe-2 {
+  background-image: url(../img/pipe2.png);
+}
+
+.pipe-3 {
+  background-image: url(../img/pipe3.png);
+}
+
+.obstacle--top {
+  transform: rotate(180deg);
+  height: 350px;
+}
+
+.ground-container {
+  height: 140px;
+  width: 650px;
+}
+
+.ground-moving {
+  height: inherit;
+  background-image: url(../img/ground.png);
+  background-repeat: repeat-x;
+  animation: slideRight 100s infinite linear;
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes slideRight {
+  from {
+    background-position: 10000%;
+  }
+  to {
+    background-position: 0%;
+  }
+}
+
+.addScore {
+  position: absolute;
+  top: 45%;
+  left: 20%;
+  display: none;
+  width: 300px;
+  font-family: "Press Start 2P", cursive;
+  font-size: 0.9rem;
+  padding: 1rem 0;
+}
+
+.score {
+  position: absolute;
+  top: 10%;
+  left: 45%;
+  font-weight: bold;
+  color: #fff;
+  font-size: 5rem;
+  z-index: 3;
+  font-family: "Odibee Sans", cursive;
+}

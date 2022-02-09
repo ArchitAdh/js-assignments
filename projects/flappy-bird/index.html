@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flappy Bird</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" type="image/png" href="./img/bird1.png" />
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Odibee+Sans&family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <!-- custom style -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Start Page -->
+    <div class="start">
+      <h1>Welcome to flappy bird</h1>
+      <div class="start-container">
+        <div class="choices">
+          <h2>Choose</h2>
+
+          <div class="choose choose--bird">
+            <p>Bird</p>
+            <img src="/img/bird1.png" class="bird1" alt="" />
+            <img src="/img/bird2.png" class="bird2" alt="" />
+            <img src="/img/bird3.png" class="bird3" alt="" />
+          </div>
+          <div class="choose choose--pipe">
+            <p>Pipe</p>
+            <img src="/img/pipe1.png" class="pipe1" alt="" />
+            <img src="/img/pipe2.png" class="pipe2" alt="" />
+            <img src="/img/pipe3.png" class="pipe3" alt="" />
+          </div>
+          <div class="choose choose--level">
+            <p>Level</p>
+            <img src="/img/easy.png" class="easy" alt="" />
+            <img src="/img/med.png" class="med" alt="" />
+            <img src="/img/hard.png" class="hard" alt="" />
+          </div>
+        </div>
+        <div class="configuration">
+          <h2>Configuration</h2>
+          <div class="config config-bird">
+            <img src="/img/bird1.png" class="config-bird-img" alt="" />
+          </div>
+          <div class="config config-pipe">
+            <img src="/img/pipe1.png" class="config-pipe-img" alt="" />
+          </div>
+          <div class="config config-level">
+            <img src="/img/easy.png" class="config-level-img" alt="" />
+          </div>
+        </div>
+      </div>
+      <button id="play" class="btn">Play Game</button>
+    </div>
+    <!-- Start Page Ends -->
+
+    <!-- Game Page -->
+    <div class="game">
+      <div class="leaderboard">
+        <h2>LeaderBoard</h2>
+        <form>
+          <input
+            class="name"
+            id="name"
+            type="text"
+            placeholder="Enter Your Name"
+          />
+          <input type="submit" class="btn" />
+        </form>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Score</th>
+              <th>Remove</th>
+            </tr>
+          </thead>
+          <tbody id="name-list"></tbody>
+        </table>
+      </div>
+      <div class="game-container">
+        <div class="sky">
+          <div class="bird"></div>
+        </div>
+        <div class="ground-container">
+          <div class="ground-moving"></div>
+        </div>
+        <div class="score">0</div>
+        <div class="addScore btn">Add to Leaderboard</div>
+      </div>
+      <div class="instructions">
+        <h2>Flappy Bird</h2>
+        <p>
+          Use your SpaceBar to get started. Fly the bird as far as you can
+          without hitting a pipe. Hit SpaceBar again to restart the game.
+          <br />
+          Click on &nbsp; &quot;Add to Leaderboard&quot; &nbsp; to add your
+          score.
+          <br />
+          <br />
+          <span> Happy Playing!!</span>
+        </p>
+        <button class="main-menu btn">Go to Main Menu</button>
+      </div>
+    </div>
+    <!-- Game page ends  -->
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

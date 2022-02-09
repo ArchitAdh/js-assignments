@@ -1,0 +1,131 @@
+body {
+  transition: 0.2s ease;
+  text-align: center;
+  background-color: rgb(185, 231, 250);
+}
+
+body.success {
+  background-color: #76db76;
+  transition: 0.2s ease;
+}
+
+body.key-msg {
+  background-color: #eb8989;
+  transition: 0.2s ease;
+}
+
+#text-1 {
+  font-size: 1em;
+  font-weight: bold;
+  margin-top: 1em;
+}
+
+.game-container {
+  margin: 5rem auto;
+}
+
+/* for buttons to be added in next complexity */
+#map-and-controls {
+  display: flex;
+  justify-content: center;
+}
+
+p {
+  margin: 0.8em 0;
+  padding: 0;
+}
+
+/* Layer and tile positioning  */
+.game-map {
+  position: relative;
+  margin: 0 auto;
+  background-color: #a7c53f;
+  background-image: radial-gradient(
+      circle at 0% 0%,
+      transparent 50%,
+      rgba(0, 0, 0, 0.1) 50%
+    ),
+    radial-gradient(circle at center, rgba(0, 0, 0, 0.1) 50%, transparent 50%),
+    radial-gradient(
+      circle at 100% 100%,
+      transparent 50%,
+      rgba(0, 0, 0, 0.1) 50%
+    ),
+    radial-gradient(circle at 0% 100%, transparent 50%, rgba(0, 0, 0, 0.1) 50%),
+    radial-gradient(circle at 100% 0%, transparent 50%, rgba(0, 0, 0, 0.1) 50%);
+  background-size: 8em 8em;
+}
+
+div.layer,
+div.layer div {
+  position: absolute;
+}
+
+/* Tile borders and color  */
+
+.default .wall {
+  background-color: #454545;
+  background-image: linear-gradient(
+      45deg,
+      rgba(0, 0, 0, 0.2) 45%,
+      transparent 55%
+    ),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 45%, transparent 55%);
+  background-size: 0.5em 0.5em;
+}
+
+/* Player , Goal and key */
+
+#sprites div:after {
+  position: absolute;
+  left: 4px;
+  top: 1px;
+  text-shadow: 0 0 1px black;
+  font-size: 1.4em;
+  /* z-index: 10; */
+}
+
+.player {
+  /* Player movement  */
+  transition: left 0.2s linear, top 0.2s linear, transform 0.7s ease;
+}
+
+.player:after {
+  content: "\1F6B6";
+}
+
+#sprites .goal {
+  height: 50px !important;
+  background: url("img/door.png");
+  background-size: 180% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: background 0.2s;
+}
+
+.key {
+  transition: opacity 0.5s ease;
+}
+
+.key:after {
+  content: "\1F511";
+}
+
+/* Goal message  */
+#success-msg,
+#key-msg {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  position: absolute;
+  top: -1.78em;
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  width: calc(100% - 0.6em);
+}
+
+body.success #success-msg,
+body.key-msg #key-msg {
+  opacity: 1;
+  transition: opacity 0.2 ease;
+}

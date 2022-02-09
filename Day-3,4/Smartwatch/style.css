@@ -1,0 +1,184 @@
+:root {
+  /* color  */
+  --Blue: #565681;
+  --Purple: #8a5362;
+  --Black: #23211f;
+  --Red: #ca3d22;
+  --Pink: #e9c7be;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin: 1rem 0;
+  font-size: 2rem;
+}
+
+h2 {
+  margin: 0.8rem 0;
+}
+
+p {
+  max-width: 65%;
+}
+
+/* General styles */
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* header  */
+header {
+  background: var(--Blue);
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+}
+
+/* showcase  */
+.showcase {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+/* watch contents  */
+.watch {
+  width: 40%;
+  position: relative;
+  min-width: 550px;
+  max-width: 550px;
+}
+
+.watch-inner {
+  position: absolute;
+  /* top: 45%;
+  left: 40%;
+   */
+  top: 45%;
+  left: 35%;
+}
+
+.watch-time {
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: 600;
+  display: block;
+}
+
+.watch-heart {
+  text-align: center;
+  position: relative;
+  left: 35px;
+  bottom: 30px;
+  display: none;
+}
+
+.watch-heart img {
+  width: 80px;
+  animation: heartbeat 1s infinite;
+  animation: heartbeat 1s 0.2s infinite;
+  visibility: hidden;
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(0.9);
+  }
+  5% {
+    visibility: visible;
+  }
+  20% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.1);
+  }
+}
+
+.watch-heart span {
+  color: #fff;
+  display: block;
+  margin-top: 0.5rem;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+/* buttons side  */
+.controls {
+  margin-top: 2.5rem;
+  width: 60%;
+  padding: 0 1rem;
+}
+
+.controls-buttons {
+  margin-top: 2rem;
+}
+
+.btn-group {
+  display: flex;
+}
+
+.btn {
+  width: 50px;
+  aspect-ratio: 4/3;
+  margin-right: 1rem;
+  border-radius: 5px;
+  border: 0;
+  cursor: pointer;
+}
+
+.btn-black {
+  background: var(--Black);
+}
+.btn-red {
+  background: var(--Red);
+}
+.btn-blue {
+  background: var(--Blue);
+}
+.btn-purple {
+  background: var(--Purple);
+}
+.btn-pink {
+  background: var(--Pink);
+}
+
+.controls-features {
+  margin-top: 2rem;
+}
+
+.btn-time,
+.btn-heart {
+  padding: 0.5rem 1rem;
+  margin-right: 0.5rem;
+  border: 0;
+  font-weight: 600;
+  border-radius: 5px;
+  background: #ddd;
+  cursor: pointer;
+}
+
+.buy {
+  display: inline-block;
+  margin-top: 2rem;
+  outline: none;
+  border: none;
+  background: #f08e1d;
+  padding: 1rem 1.5rem;
+  border-radius: 5px;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-decoration: none;
+  color: #000;
+}

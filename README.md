@@ -1,0 +1,1 @@
+Some Assignments to strengthen Javascript knowledge
